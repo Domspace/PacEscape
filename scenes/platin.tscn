@@ -1,0 +1,159 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://tilemaps/platinTilemap.png" type="Texture" id=1]
+[ext_resource path="res://scripts/pacMan.gd" type="Script" id=2]
+[ext_resource path="res://anim/pacman/pacman0.png" type="Texture" id=3]
+[ext_resource path="res://anim/pacman/pacman1.png" type="Texture" id=4]
+[ext_resource path="res://anim/pacman/pacman2.png" type="Texture" id=5]
+[ext_resource path="res://anim/pacman/pacman3.png" type="Texture" id=6]
+[ext_resource path="res://scripts/pacManAnim.gd" type="Script" id=7]
+[ext_resource path="res://scripts/camera2D.gd" type="Script" id=8]
+[ext_resource path="res://scenes/button.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/pushBorder.gd" type="Script" id=10]
+[ext_resource path="res://anim/pushBorder/pushBorder.png" type="Texture" id=11]
+
+[sub_resource type="TileSet" id=1]
+0/name = "platinTilemap.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 8, 8 )
+0/tile_mode = 2
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 4, 4 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/z_index_map = [  ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [  ]
+0/z_index = 0
+1/name = "platinTilemap.png 1"
+1/texture = ExtResource( 1 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 0, 0, 32, 32 )
+1/tile_mode = 2
+1/autotile/icon_coordinate = Vector2( 0, 0 )
+1/autotile/tile_size = Vector2( 8, 8 )
+1/autotile/spacing = 0
+1/autotile/occluder_map = [  ]
+1/autotile/navpoly_map = [  ]
+1/autotile/z_index_map = [  ]
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shapes = [  ]
+1/z_index = 0
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "mainAnim",
+"speed": 7.0
+} ]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 7.85508
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 281.436, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 10, 172.261 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 10, 161.217 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 5.08206, 121.044 )
+
+[node name="platin" type="Node"]
+
+[node name="tileMap" type="TileMap" parent="."]
+position = Vector2( -266, -140 )
+scale = Vector2( 4, 4 )
+tile_set = SubResource( 1 )
+cell_size = Vector2( 8, 8 )
+format = 1
+tile_data = PoolIntArray( 262151, 1, 196610, 262152, 1, 196610, 262153, 1, 196610, 262154, 1, 196609, 262155, 1, 196608, 262156, 1, 196610, 262157, 1, 196610, 262158, 1, 196610, 262159, 1, 196610, 262160, 1, 196610, 262161, 1, 196608, 262162, 1, 196609, 262163, 1, 196610, 262164, 1, 196610, 262165, 1, 196610, 262166, 1, 196610, 262167, 1, 196610, 327687, 1, 131074, 327688, 1, 131074, 327689, 1, 131074, 327690, 1, 131075, 327691, 1, 196611, 327692, 1, 131074, 327693, 1, 131074, 327694, 1, 196611, 327695, 1, 131075, 327696, 1, 131074, 327697, 1, 131075, 327698, 1, 131074, 327699, 1, 196611, 327700, 1, 131074, 327701, 1, 131074, 327702, 1, 196611, 327703, 1, 131074, 393223, 1, 196610, 393224, 1, 196610, 393225, 1, 196610, 393226, 1, 196608, 393227, 1, 196610, 393228, 1, 196610, 393229, 1, 196610, 393230, 1, 196609, 393231, 1, 196610, 393232, 1, 196610, 393233, 1, 196610, 393234, 1, 196610, 393235, 1, 196610, 393236, 1, 196609, 393237, 1, 196608, 393238, 1, 196610, 393239, 1, 196610, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 458762, 1, 3, 458763, 1, 0, 458764, 1, 2, 458765, 1, 0, 458766, 1, 0, 458767, 1, 0, 458768, 1, 1, 458769, 1, 0, 458770, 1, 0, 458771, 1, 0, 458772, 1, 2, 458773, 1, 0, 458774, 1, 0, 458775, 1, 0, 524295, 1, 196610, 524296, 1, 196610, 524297, 1, 196610, 524298, 1, 196609, 524299, 1, 196610, 524300, 1, 196610, 524301, 1, 196610, 524302, 1, 196610, 524303, 1, 196610, 524304, 1, 196608, 524305, 1, 196610, 524306, 1, 196610, 524307, 1, 196610, 524308, 1, 196608, 524309, 1, 196610, 524310, 1, 196610, 524311, 1, 196610, 589831, 1, 131074, 589832, 1, 196611, 589833, 1, 131074, 589834, 1, 131074, 589835, 1, 196611, 589836, 1, 131075, 589837, 1, 131074, 589838, 1, 131075, 589839, 1, 196611, 589840, 1, 131075, 589841, 1, 196611, 589842, 1, 131075, 589843, 1, 196611, 589844, 1, 196611, 589845, 1, 131074, 589846, 1, 196611, 589847, 1, 131074, 655367, 1, 0, 655368, 1, 0, 655369, 1, 2, 655370, 1, 0, 655371, 1, 0, 655372, 1, 0, 655373, 1, 0, 655374, 1, 0, 655375, 1, 0, 655376, 1, 3, 655377, 1, 0, 655378, 1, 0, 655379, 1, 0, 655380, 1, 2, 655381, 1, 0, 655382, 1, 0, 655383, 1, 0, 720903, 1, 131074, 720904, 1, 196611, 720905, 1, 131075, 720906, 1, 196611, 720907, 1, 131074, 720908, 1, 196611, 720909, 1, 131075, 720910, 1, 131074, 720911, 1, 131075, 720912, 1, 196611, 720913, 1, 131074, 720914, 1, 131074, 720915, 1, 131074, 720916, 1, 196611, 720917, 1, 131074, 720918, 1, 196611, 720919, 1, 131074, 786439, 1, 196610, 786440, 1, 196610, 786441, 1, 196610, 786442, 1, 196608, 786443, 1, 196610, 786444, 1, 196610, 786445, 1, 196610, 786446, 1, 196610, 786447, 1, 196610, 786448, 1, 196610, 786449, 1, 196609, 786450, 1, 196610, 786451, 1, 196610, 786452, 1, 196608, 786453, 1, 196610, 786454, 1, 196610, 786455, 1, 196610, 851975, 1, 0, 851976, 1, 0, 851977, 1, 0, 851978, 1, 0, 851979, 1, 0, 851980, 1, 0, 851981, 1, 0, 851982, 1, 0, 851983, 1, 0, 851984, 1, 0, 851985, 1, 0, 851986, 1, 0, 851987, 1, 0, 851988, 1, 0, 851989, 1, 0, 851990, 1, 0, 851991, 1, 0 )
+
+[node name="pacMan" type="KinematicBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -13.017, 139.733 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pacManAnim" type="AnimatedSprite" parent="pacMan"]
+frames = SubResource( 2 )
+animation = "mainAnim"
+script = ExtResource( 7 )
+
+[node name="hitBox" type="CollisionShape2D" parent="pacMan"]
+shape = SubResource( 3 )
+
+[node name="camera" type="Camera2D" parent="."]
+position = Vector2( 230, 153.079 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+script = ExtResource( 8 )
+
+[node name="border" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 215.8, -3.39843 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border"]
+shape = SubResource( 4 )
+
+[node name="border2" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 231.943, 306.708 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border2"]
+shape = SubResource( 4 )
+
+[node name="border3" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( -32.285, 135.937 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border3"]
+shape = SubResource( 5 )
+
+[node name="border4" type="StaticBody2D" parent="."]
+editor/display_folded = true
+position = Vector2( 495.321, 146.982 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="border4"]
+shape = SubResource( 6 )
+
+[node name="button" parent="." instance=ExtResource( 9 )]
+position = Vector2( 267.468, 91.8094 )
+
+[node name="pushBorder" type="KinematicBody2D" parent="."]
+position = Vector2( -30.2342, 135.98 )
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="pushBorderCollision" type="CollisionShape2D" parent="pushBorder"]
+shape = SubResource( 7 )
+
+[node name="pushBorderSprite" type="Sprite" parent="pushBorder"]
+texture = ExtResource( 11 )
+[connection signal="platinPressed" from="button" to="pushBorder" method="_on_button_platinPressed"]

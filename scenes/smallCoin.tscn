@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scripts/smallCoin.gd" type="Script" id=1]
+[ext_resource path="res://anim/smallCoin/smallCoin0.png" type="Texture" id=2]
+[ext_resource path="res://anim/smallCoin/smallCoin1.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 6.70158
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 3.0
+} ]
+
+[node name="smallCoin" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+frame = 1
