@@ -17,6 +17,7 @@ _global_script_class_icons={
 
 config/name="PacMan"
 run/main_scene="res://mainGameScene.tscn"
+boot_splash/image="res://icon.png"
 config/icon="res://icon.png"
 
 [debug]
