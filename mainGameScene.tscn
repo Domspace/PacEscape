@@ -531,6 +531,7 @@ current = true
 zoom = Vector2( 0.5, 0.5 )
 
 [node name="coinHandler" type="Node" parent="."]
+editor/display_folded = true
 script = ExtResource( 11 )
 
 [node name="label" type="Label" parent="coinHandler"]

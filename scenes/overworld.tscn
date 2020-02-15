@@ -193,3 +193,31 @@ shape = SubResource( 12 )
 [node name="redCarSprite" type="Sprite" parent="carHandler/redCar"]
 scale = Vector2( 2, 2 )
 texture = ExtResource( 10 )
+
+[node name="redCar2" type="Area2D" parent="carHandler"]
+position = Vector2( 181.449, 23.3751 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="redCarCollision" type="CollisionShape2D" parent="carHandler/redCar2"]
+shape = SubResource( 12 )
+
+[node name="redCarSprite" type="Sprite" parent="carHandler/redCar2"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
+
+[node name="redCar3" type="Area2D" parent="carHandler"]
+position = Vector2( 207.711, 295.989 )
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="redCarCollision" type="CollisionShape2D" parent="carHandler/redCar3"]
+shape = SubResource( 12 )
+
+[node name="redCarSprite" type="Sprite" parent="carHandler/redCar3"]
+scale = Vector2( 2, 2 )
+texture = ExtResource( 10 )
