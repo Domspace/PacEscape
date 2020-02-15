@@ -717,6 +717,7 @@ frames = SubResource( 25 )
 frame = 1
 
 [node name="fpsCounter" type="Label" parent="."]
+visible = false
 margin_left = -23.9798
 margin_top = 5.24557
 margin_right = 16.0202
