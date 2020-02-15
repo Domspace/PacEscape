@@ -14,7 +14,7 @@ func _ready():
 func _process(delta):
 	for bodies in get_overlapping_bodies():
 		if bodies.name == "pacMan":
-			get_parent().eatenCars += 1
+			get_parent().eatenCars += 0.5
 			get_parent().moveCar(self)
 			carTimer.start()
 
