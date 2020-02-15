@@ -17,7 +17,6 @@ func _process(delta):
 			get_parent().eatenCars += 1
 			get_parent().moveCar(self)
 			carTimer.start()
-			print(carTimer.time_left)
-	print(carTimer.time_left)
+
 func _on_Timer_timeout():
 	position = Vector2(defaultx, defaulty)
