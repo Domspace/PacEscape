@@ -498,7 +498,7 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=26]
 extents = Vector2( 10, 24.8312 )
 
-[node name="mainGameScene" type="Node"]
+[node name="secondLevel" type="Node"]
 
 [node name="tileMap" type="TileMap" parent="."]
 position = Vector2( -266, -140 )
