@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="mainMenu" type="Node"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 259.843
+margin_top = 71.0682
+margin_right = 692.843
+margin_bottom = 292.068
+text = "PacEscape"
+align = 1
