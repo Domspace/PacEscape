@@ -2,10 +2,13 @@ extends Area2D
 
 onready var carTimer = Timer.new()
 
+signal gameOver
+
 var defaultx = get_position().x
 var defaulty = get_position().y
 
 func _ready():
+	connect("gameOver", get_node("../../gameOverButton"), "_on_redCar_gameOver")
 	add_child(carTimer)
 	carTimer.connect("timeout", self, "_on_Timer_timeout")
 	carTimer.set_one_shot(true)
