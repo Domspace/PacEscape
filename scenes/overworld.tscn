@@ -183,6 +183,7 @@ script = ExtResource( 8 )
 
 [node name="redCar" type="Area2D" parent="carHandler"]
 position = Vector2( 295.924, 167.624 )
+scale = Vector2( 1, 0.844412 )
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_group_": true

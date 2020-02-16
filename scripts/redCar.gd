@@ -12,6 +12,7 @@ func _ready():
 	carTimer.set_timer_process_mode(0)
 
 func _process(delta):
+	get_parent().idleCarMovement(self)
 	for bodies in get_overlapping_bodies():
 		if bodies.name == "pacMan":
 			get_parent().eatenCars += 0.5
