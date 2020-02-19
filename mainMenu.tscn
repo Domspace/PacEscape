@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://miscellaneous/pixelfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/playButton.gd" type="Script" id=2]
@@ -7,6 +7,10 @@
 font_path = "res://miscellaneous/Retro Gaming.ttf"
 
 [sub_resource type="DynamicFont" id=2]
+size = 40
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFont" id=14]
 size = 40
 font_data = SubResource( 13 )
 
@@ -48,5 +52,30 @@ margin_bottom = 433.155
 rect_pivot_offset = Vector2( 179, 33.5 )
 custom_fonts/font = SubResource( 2 )
 text = "Quit"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 608 )
+anchor_mode = 0
+current = true
+
+[node name="credits" type="Node" parent="."]
+
+[node name="Label" type="Label" parent="credits"]
+margin_left = 150.0
+margin_top = 690.0
+margin_right = 880.0
+margin_bottom = 873.0
+custom_fonts/font = SubResource( 14 )
+text = "Made by Dominik Theuerkauf
+Font by Daymarius"
+
+[node name="backButton" type="Button" parent="credits"]
+margin_left = 110.0
+margin_top = 1070.0
+margin_right = 280.0
+margin_bottom = 1135.0
+rect_pivot_offset = Vector2( 179, 33.5 )
+custom_fonts/font = SubResource( 2 )
+text = "Back"
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playButton_pressed"]
 [connection signal="pressed" from="quitButton" to="playButton" method="_on_quitButton_pressed"]
