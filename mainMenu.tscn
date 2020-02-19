@@ -54,7 +54,6 @@ custom_fonts/font = SubResource( 2 )
 text = "Quit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 0, 608 )
 anchor_mode = 0
 current = true
 
