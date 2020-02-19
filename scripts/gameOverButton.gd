@@ -7,4 +7,4 @@ func _on_redCar_gameOver():
 	visible = true
 
 func _on_gameOverButton_pressed():
-	get_tree().quit()
+	get_tree().change_scene("res://mainMenu.tscn")
