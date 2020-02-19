@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://tilemaps/overworldTilemap.png" type="Texture" id=1]
 [ext_resource path="res://scripts/pacMan.gd" type="Script" id=2]
@@ -149,6 +149,13 @@ radius = 7.85508
 [sub_resource type="RectangleShape2D" id=12]
 extents = Vector2( 9.13336, 6.97609 )
 
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://miscellaneous/Retro Gaming.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 20
+font_data = SubResource( 13 )
+
 [node name="overworld" type="Node"]
 
 [node name="overworldTileset" type="TileMap" parent="."]
@@ -238,10 +245,11 @@ scale = Vector2( 2.70706, 2.70706 )
 texture = ExtResource( 10 )
 
 [node name="gameOverButton" type="Button" parent="."]
-margin_left = 209.0
-margin_top = 136.0
-margin_right = 300.0
-margin_bottom = 178.0
+margin_left = 197.604
+margin_top = 144.802
+margin_right = 349.604
+margin_bottom = 186.802
+custom_fonts/font = SubResource( 14 )
 text = "Game Over!"
 script = ExtResource( 12 )
 [connection signal="pressed" from="gameOverButton" to="gameOverButton" method="_on_gameOverButton_pressed"]
