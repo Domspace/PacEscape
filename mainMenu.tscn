@@ -3,27 +3,30 @@
 [ext_resource path="res://miscellaneous/pixelfont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://scripts/playButton.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFontData" id=13]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://miscellaneous/Retro Gaming.ttf"
 
 [sub_resource type="DynamicFont" id=2]
 size = 40
-font_data = SubResource( 13 )
+font_data = SubResource( 1 )
 
-[sub_resource type="DynamicFont" id=14]
+[sub_resource type="DynamicFont" id=3]
 size = 40
-font_data = SubResource( 13 )
+font_data = SubResource( 1 )
 
 [node name="mainMenu" type="Node"]
 
 [node name="title" type="Label" parent="."]
 margin_left = 249.0
 margin_top = 23.0
-margin_right = 696.0
-margin_bottom = 244.0
+margin_right = 735.0
+margin_bottom = 120.0
 custom_fonts/font = ExtResource( 1 )
 text = "PacEscape"
 align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="playButton" type="Button" parent="."]
 margin_left = 320.0
@@ -64,7 +67,7 @@ margin_left = 150.0
 margin_top = 690.0
 margin_right = 880.0
 margin_bottom = 873.0
-custom_fonts/font = SubResource( 14 )
+custom_fonts/font = SubResource( 3 )
 text = "Made by Dominik Theuerkauf
 Font by Daymarius"
 

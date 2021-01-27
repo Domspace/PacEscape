@@ -10,6 +10,7 @@ var degree = 0
 var boost = 1
 var border = false
 
+
 func _physics_process(delta):
 	#basic input map
 	if Input.is_action_pressed("shift"):
