@@ -79,6 +79,7 @@ margin_bottom = 1135.0
 rect_pivot_offset = Vector2( 179, 33.5 )
 custom_fonts/font = SubResource( 2 )
 text = "Back"
+
 [connection signal="pressed" from="playButton" to="playButton" method="_on_playButton_pressed"]
 [connection signal="pressed" from="creditsButton" to="playButton" method="_on_creditsButton_pressed"]
 [connection signal="pressed" from="quitButton" to="playButton" method="_on_quitButton_pressed"]
